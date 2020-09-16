@@ -111,6 +111,7 @@ function vendorJS() {
             [
                 'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
                 './node_modules/tiny-slider/dist/tiny-slider.js',
+                './node_modules/howler/dist/howler.js',
                 config.jsVendorSRC,
             ],
             { since: gulp.lastRun('customJS') }

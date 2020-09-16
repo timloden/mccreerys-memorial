@@ -31,7 +31,7 @@ $grays: (
 ) !default;
 // fusv-enable
 
-$blue: #005ca9;
+$blue: #781116;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #d63384 !default;
@@ -354,7 +354,8 @@ $transition-collapse: height 0.35s ease !default;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: 'Lato', sans-serif;
+$font-family-sans-serif: 'Poppins', sans-serif;
+$font-family-serif: 'Playfair Display', serif;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace !default;
 $font-family-base: $font-family-sans-serif !default;

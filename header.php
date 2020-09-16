@@ -25,48 +25,27 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <div id="page" class="site">
-        <header class="header">
-            <nav class="navbar navbar-expand-lg navbar-light border-bottom">
-                <div class="container">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                            </li>
-                        </ul>
-                        <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form>
+        <header
+            class="header w-100 py-3 <?php if (is_front_page()) { echo 'grad-bg position-absolute'; } else { echo 'bg-primary'; } ?>">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center flex-column flex-md-row">
+                    <div class="logo text-center text-md-left">
+                        <a href="<?php echo site_url(); ?>">
+                            <p class="mb-0">Celebrating the life of</p>
+                            <p class="mb-0 font-weight-bold" style="font-size: 28px; line-height: 1;">Thomas McCreery
+                            </p>
+                        </a>
+                    </div>
+                    <div class="submit-memory pt-3 pt-md-0 text-center text-md-right d-flex align-items-center">
+                        <a style="font-size: 24px;" href="#" onclick="sound.play();"><i class="las la-play"></i></a>
+                        <a style="font-size: 24px;" href="#" onclick="sound.pause();" class="mr-3"><i
+                                class="las la-pause"></i></a>
+                        <a class="font-weight-bold" href="<?php echo site_url(); ?>/submit-a-memory">Submit
+                            a
+                            Memory</a>
                     </div>
                 </div>
-            </nav>
+            </div>
         </header>
-    </div>
 
-    <div id="content" class="site-content">
+        <div id="content" class="site-content">

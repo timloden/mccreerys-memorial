@@ -13,3 +13,19 @@ function scripts_and_styles() {
 }
 
 add_action( 'wp_enqueue_scripts', 'scripts_and_styles' );
+
+
+add_action('login_enqueue_scripts', 'custom_login_logo');
+
+function custom_login_logo()
+{
+    $general_settings = get_field('general_settings', 'option');
+    $logo = $general_settings['organization_logo'];
+    ?>
+
+<style type="text/css">
+#login h1 {
+    display: none;
+}
+</style>
+<?php }
