@@ -30,6 +30,9 @@ $la-font-path: '/wp-content/themes/mccreerys-memorial/assets/fonts/line-awesome'
 // animate.css
 @import 'node_modules/animate.css/animate';
 
+// animate on scroll
+@import 'node_modules/aos/dist/aos';
+
 // Global
 @import 'global/typography';
 @import 'global/forms';

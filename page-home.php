@@ -54,6 +54,7 @@ get_header();
                 // The Query
                 $query = new WP_Query( $args ); 
                 if ( $query->have_posts() ) :
+                    $delay = 0;
                 ?>
                 <div class="card-columns p-0 mb-5">
                 <?php while ( $query->have_posts() ) : $query->the_post(); 
@@ -61,7 +62,7 @@ get_header();
                     $id = get_the_ID();
                     $image = get_field( "image" );
                 ?>
-                    <div class="card shadow">
+                    <div class="card shadow" data-aos="fade-up" data-aos-once="true">
                         <div class="card-body position-relative">
                             <div class="excerpt position-relative">
                                 <p class="card-text"><?php the_excerpt(); ?></p>
@@ -93,7 +94,9 @@ get_header();
                         </div>
                     </div>
                     </div>
-                <?php endwhile; wp_reset_postdata(); ?>
+                <?php 
+                $delay++;
+                endwhile; wp_reset_postdata(); ?>
 
                 <?php else : ?>
                 </div>
@@ -106,7 +109,6 @@ get_header();
 
 
 <?php get_footer(); ?>
-
 <script>
 var slider = tns({
     container: '.slide-show',
