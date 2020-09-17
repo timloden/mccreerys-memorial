@@ -5,7 +5,7 @@ function change_post_content_type( $field ) {
     if($field['type'] == 'wysiwyg') {
         $field['tabs'] = 'visual';
         $field['toolbar'] = 'basic';
-        $field['media_upload'] = 0;
+        $field['media_upload'] = 1;
     }
     return $field;
 }

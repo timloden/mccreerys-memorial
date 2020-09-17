@@ -27,7 +27,7 @@ get_header();
                     'post_type'     => 'post',
                     'post_status'   => 'pending'
                 ),
-                'uploader' => 'basic',
+                'uploader' => 'wp',
                 'submit_value' => __("Submit Memory", 'acf'),
                 'updated_message' => __("Thank you for sharing your memory!", 'acf'),
                 'html_submit_button'  => '<input type="submit" class="btn btn-primary" value="%s" />',

@@ -89,6 +89,7 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 
 }
 
+
 // disable comments for posts
 function my_prefix_comments_open( $open, $post_id ) {
 	$post_type = get_post_type( $post_id );

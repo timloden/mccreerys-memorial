@@ -29,7 +29,7 @@ var sound = new Howl({
         } ?>
 
     ],
-    autoplay: true,
+    //autoplay: true,
     loop: true,
     volume: 0.5
 });
